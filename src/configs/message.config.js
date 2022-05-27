@@ -1,9 +1,9 @@
 exports.ADD_ITEM_SUCCESS = "Add Item Successfully";
 exports.UPDATE_ITEM_SUCCESS = "Update Item Successfully";
 exports.DELETE_ITEM_SUCCESS = "Delete Item Successfully";
-exports.ADD_CUSTOMER_SUCCESS = "Add CUSTOMER Successfully";
-exports.UPDATE_CUSTOMER_SUCCESS = "Update CUSTOMER Successfully";
-exports.DELETE_CUSTOMER_SUCCESS = "Delete CUSTOMER Successfully";
+exports.ADD_word_SUCCESS = "Add word Successfully";
+exports.UPDATE_word_SUCCESS = "Update word Successfully";
+exports.DELETE_word_SUCCESS = "Delete word Successfully";
 exports.ADD_SUPPLIER_SUCCESS = "Add Supplier Successfully";
 exports.UPDATE_SUPPLIER_SUCCESS = "Update Supplier Successfully";
 exports.DELETE_SUPPLIER_SUCCESS = "Delete Supplier Successfully";
