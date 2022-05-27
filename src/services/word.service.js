@@ -1,23 +1,20 @@
 const word = require("../models/word.model.js");
-
-exports.addword = async (word) => {
-  newword = new word(word);
-  return await newword.save();
-};
-
-exports.removeword = async (id) => {
-  await word.findByIdAndRemove(id);
-};
-
-exports.updateword = async (id, word) => {
-  return await word.findByIdAndUpdate(id, word);
-};
-
+const fs = require("fs");
 exports.getAllwords = async () => {
   return await word.find();
 };
+exports.initRedis_withAllWords = async () => {
+  await getWordsFromFile();
+};
 
-/*
-service will use models to work with database.
-this is the only place where db query run.
-*/
+async function getWordsFromFile() {
+  fs.readFile("data/words_alpha.txt", "utf8", (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    const words = data.split("\n");
+    console.log(words.length);
+  });
+}
