@@ -1,5 +1,7 @@
 const word = require("../services/word.service");
-module.exports.intiRedis = async function intiRedis() {
-  await word.initRedis_withAllWords();
-  console.warn("Added data to redis");
+let words;
+module.exports.init = async function init() {
+  words = await word.init_withAllWords();
+  console.warn("Added data to list");
 };
+module.exports.words = this.words;

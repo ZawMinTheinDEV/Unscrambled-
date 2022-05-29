@@ -4,10 +4,7 @@ const wordError = require("../middlewares/errors/word.error.js");
 const router = require("express").Router();
 
 router.get("/all", wordController.getAllwords);
-router.post("", wordController.addword);
-router.put("", wordController.updateword);
-router.delete("", wordController.deleteword);
-
+router.get("/id", wordController.getAllwords);
 router.use(wordError.errorHandler);
 
 module.exports = router;

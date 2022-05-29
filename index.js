@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-require("./src/utils/redis.initData").intiRedis();
+require("./src/utils/redis.initData").init();
 const express = require("express");
 
 const wordRoute = require("./src/routes/word.route");
