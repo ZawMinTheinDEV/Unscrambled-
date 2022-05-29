@@ -3,8 +3,8 @@ const wordError = require("../middlewares/errors/word.error.js");
 
 const router = require("express").Router();
 
-router.get("/all", wordController.getAllwords);
-router.get("/id", wordController.getAllwords);
+router.get("/all", wordController.getAllWords);
+router.get("/id", wordController.getWordsById);
 router.use(wordError.errorHandler);
 
 module.exports = router;

@@ -1,10 +1,14 @@
 const fs = require("fs");
 const util = require("util");
-
+var words;
 exports.init_withAllWords = async () => {
-  const words = await getWordsFromFile();
+  words = await getWordsFromFile();
 
   console.log(words.length);
+};
+
+exports.getAllWords = async () => {
+  return words;
 };
 
 async function getWordsFromFile() {
