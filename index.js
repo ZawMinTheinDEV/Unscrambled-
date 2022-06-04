@@ -7,7 +7,7 @@ const wordRoute = require("./src/routes/word.route");
 dotenv.config();
 const app = express();
 
-//default middlewares
+//default  middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

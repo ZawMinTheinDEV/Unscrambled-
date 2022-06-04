@@ -1,5 +1,5 @@
-getAllPossibleWordCombination("qwertyuiopa");
-
+//getAllPossibleWordCombination("");
+getAllPossibleWordCombinationWithFixLength("qwerrtyuiopl");
 function getAllPossibleWordCombination(word) {
   var globalArray = [];
 
@@ -9,6 +9,26 @@ function getAllPossibleWordCombination(word) {
   var filteredWords = getUniqueItemsOnly(
     allLength.filter((word) => word.length > 1)
   );
+
+  count = 0;
+  filteredWords.forEach((w) => {
+    permute(w.split(""), function () {
+      currentWord = this.join("");
+      globalArray.includes(currentWord) ? "" : globalArray.push(this.join(""));
+      count++;
+    });
+  });
+
+  console.log(globalArray.length + "<" + count);
+  return globalArray;
+}
+function getAllPossibleWordCombinationWithFixLength(word) {
+  var globalArray = [];
+
+  //get words from all possible unique character length
+
+  //remove duplicate and filter words by length>1
+  var filteredWords = [word];
 
   count = 0;
   filteredWords.forEach((w) => {
