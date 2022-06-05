@@ -1,3 +1,3 @@
-# Authentication and Authorization in Node.js
-
 # Used stack
+
+Node.js (Express)
